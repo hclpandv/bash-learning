@@ -86,7 +86,7 @@ do
 
     echo "-- ${BRIGHT}${CYAN}SERVICES${NORMAL} ---------------------------------------------------------"
     echo "${BRIGHT}${YELLOW} 21 ${NORMAL} All Running Services ${BRIGHT}${GREEN}${STACK_nr}${NORMAL}              ${BRIGHT}${YELLOW} 31 ${NORMAL} Future Feature"
-    echo "${BRIGHT}${YELLOW} 22 ${NORMAL} Show last ${BRIGHT}${GREEN}${STACK_nr2}${NORMAL}                        ${BRIGHT}${YELLOW} 32 ${NORMAL} Future Feature"
+    
    
     echo ""
 
