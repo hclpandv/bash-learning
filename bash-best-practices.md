@@ -37,6 +37,11 @@ readonly LOG_FILE="${LOG_DIR}/${__file}.log"  #TODO(vpandey6): Add Date and Time
 
 #Functions Library
 
+# OUTPUT-COLORING
+red=$( tput setaf 1 )
+green=$( tput setaf 2 )
+NC=$( tput setaf 0 ) 
+
 PROGNAME=$(basename $0)
 
 error_exit()
