@@ -8,7 +8,10 @@
 #TODO(vpandey6) : to be customized  
 
 #!/usr/bin/env bash
+#
+# Script Description
 
+DEBUG=false
 set -o errexit
 set -o pipefail
 [[ "${DEBUG}" == 'true' ]] && set -o xtrace
