@@ -65,6 +65,16 @@ error_exit()
 echo "Example of error with line number and message"
 error_exit "$LINENO: An error has occurred."
 
+#######################################
+# Check if Directory Exists
+# Globals:
+#   NO_VAR
+# Arguments:
+#   Dir Path and $1
+# Returns:
+#   True or False
+#######################################
+
 function directoryExists {
     #
     # TODO(vpandey6) : Modify according to Google Styling guide
