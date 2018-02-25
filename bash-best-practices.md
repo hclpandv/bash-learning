@@ -30,6 +30,11 @@ arg1="${1:-}"
 readonly LOG_DIR="${__dir}"
 readonly LOG_FILE="${LOG_DIR}/${__file}.log"  #TODO(vpandey6): Add Date and Time in the String
 
+```
+#### Create Functions Library and use main() at last
+
+```
+
 #Functions Library
 
 PROGNAME=$(basename $0)
@@ -54,6 +59,11 @@ error_exit()
 
 echo "Example of error with line number and message"
 error_exit "$LINENO: An error has occurred."
+
+main()
+{
+ #Write your main code here
+}
 
 ```
 
