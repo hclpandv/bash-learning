@@ -65,6 +65,18 @@ error_exit()
 echo "Example of error with line number and message"
 error_exit "$LINENO: An error has occurred."
 
+function directoryExists {
+    #
+    # TODO(vpandey6) : Modify according to Google Styling guide
+    #
+    
+    if [ -d "$1" ] ; then
+        printf "%s\n" "${green}$1${NC}"
+    else
+        printf "%s\n" "${red}$1${NC}"
+    fi
+}
+
 main()
 {
  #Write your main code here
