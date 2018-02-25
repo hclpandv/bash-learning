@@ -69,18 +69,16 @@ error_exit "$LINENO: An error has occurred."
 # Check if Directory Exists
 # Globals:
 #   NO_VAR
+$   Using Color Formatting
 # Arguments:
-#   Dir Path and $1
+#   Dir Path as first Arguement
 # Returns:
 #   True or False
 #######################################
 
 function directoryExists {
-    #
-    # TODO(vpandey6) : Modify according to Google Styling guide
-    #
-    
-    if [ -d "$1" ] ; then
+    dir_path=$1
+    if [ -d "${dir_path}" ] ; then
         printf "%s\n" "${green}$1${NC}"
     else
         printf "%s\n" "${red}$1${NC}"
