@@ -19,13 +19,10 @@ SCRIPT_NAME="$(basename ${SCRIPT_FILE} .sh)"
 TIME_STAMP=$(date +'%Y%m%d-%H%M') #For Logname
 HOSTNAME=$( hostname -s)
 
-
 #Global Constants
 
 readonly LOG_DIR="${SCRIPT_DIR}"
-readonly LOG_FILE="${LOG_DIR}/${SCRIPT_NAME}${TIME_STAMP}.log"
-
- 
+readonly LOG_FILE="${LOG_DIR}/${SCRIPT_NAME}${TIME_STAMP}.log" 
 
 #Params
 
@@ -61,8 +58,7 @@ WRITE_LOG(){
 
 TAKES_TIME(){ echo "${GREEN}This will take some time. One moment please...${NORMAL}"; }
 
-ERROR_EXIT()
-{
+ERROR_EXIT(){
   #USAGE : ERROR_EXIT "${LINENO}: An error has occurred."
   datestring=$(date +'%Y-%m-%d %H:%M:%S')
   echo "[$datestring] : ${SCRIPT_NAME}: ${1:-"Unknown Error"}" >> ${LOG_FILE}
