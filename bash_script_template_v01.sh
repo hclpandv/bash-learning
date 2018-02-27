@@ -18,6 +18,7 @@ SCRIPT_FILE="${SCRIPT_DIR}/$(basename "${BASH_SOURCE[0]}")"
 SCRIPT_NAME="$(basename ${SCRIPT_FILE} .sh)"
 TIME_STAMP=$(date +'%Y%m%d-%H%M') #For Logname
 HOSTNAME=$( hostname -s)
+USERNAME=$(whoami)
 
 #Global Constants
 
@@ -51,6 +52,17 @@ UNDERLINE=$(tput smul)
 
 # -----------------------------FUNCTIONS LIBRARY{{STARTS HERE}}------------------------------------------
 
+ADD_HEADER(){
+  tee -a ${LOG_FILE} <<EOF
+    -----------------------------------
+    Execution of ${SCRIPT_NAME} started
+	  -----------------------------------
+	  Hostname 	  : ${HOSTNAME}
+	  UserName    : ${USERNAME}
+	  -----------------------------------  
+  EOF
+}
+
 WRITE_LOG(){
   local msg=$1 #Param
   datestring=$(date +'%Y-%m-%d %H:%M:%S')
@@ -73,13 +85,14 @@ ERROR_EXIT(){
 ###########
 
 
-
-
 # -----------------------------FUNCTIONS LIBRARY{{ENDS HERE}}------------------------------------------
 
 
 
 # -----------------------------{{MAIN FUNCTION}}-------------------------------------------------------
+
+ADD_HEADER
+TAKES_TIME
 
 main(){
 
