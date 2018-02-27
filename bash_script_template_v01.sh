@@ -5,7 +5,7 @@ SCRIPT_VERSION=1.0
 # Date 	      : 26/Feb/2018
 # Contact     : Vikas Pandey
 
-DEBUG=false
+DEBUG=false   
 
 [[ "${DEBUG}" == 'true' ]] && set -o errexit
 [[ "${DEBUG}" == 'true' ]] && set -o pipefail
@@ -29,6 +29,7 @@ readonly LOG_FILE="${LOG_DIR}/${SCRIPT_NAME}${TIME_STAMP}.log"
 PARAM_1="${1:-}"
 PARAM_2="${2:-}"
 PARAM_3="${3:-}"
+PARAM_4="${4:-}"
 
 #For User Interface
 
@@ -62,14 +63,20 @@ ERROR_EXIT(){
   #USAGE : ERROR_EXIT "${LINENO}: An error has occurred."
   datestring=$(date +'%Y-%m-%d %H:%M:%S')
   echo "[$datestring] : ${SCRIPT_NAME}: ${1:-"Unknown Error"}" >> ${LOG_FILE}
-  echo "${SCRIPT_NAME}: ${1:-"Unknown Error"}" 1>&2
+  echo "${RED}${SCRIPT_NAME}: ${1:-"Unknown Error"}${NORMAL}" 1>&2
   exit 1
 }
 
+###########
+#  CUSTOM FUNCTIONS  - Write All Your Custom functions below this Section. No Modification on above functions suggested.
+#			           Use Lowercase function names to differentiate from Lib functions
+###########
 
 
 
-# -----------------------------FUNCTIONS LIBRARY{{ENDS HERE}}------------------------------------------cl
+
+# -----------------------------FUNCTIONS LIBRARY{{ENDS HERE}}------------------------------------------
+
 
 
 # -----------------------------{{MAIN FUNCTION}}-------------------------------------------------------
@@ -85,22 +92,3 @@ main(){
 ################### Execution of Main Script--------- PLEASE DO NOT MODIFY ANYTHING BELOW THIS LINE-------------
 
 main
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
