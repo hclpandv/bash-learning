@@ -56,7 +56,7 @@ ADD_HEADER(){
 #Cant Keep Space due to EOF thing. search more info
 tee -a ${LOG_FILE} <<EOF 
 -----------------------------------
-Execution of ${This} started
+Execution of ${SCRIPT_NAME} started
 ----------------------------------
 Hostname        : ${HOSTNAME}
 UserName        : ${USER}
