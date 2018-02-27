@@ -53,14 +53,16 @@ UNDERLINE=$(tput smul)
 # -----------------------------FUNCTIONS LIBRARY{{STARTS HERE}}------------------------------------------
 
 ADD_HEADER(){
-  tee -a ${LOG_FILE} <<EOF
-    -----------------------------------
-    Execution of ${SCRIPT_NAME} started
-	  -----------------------------------
-	  Hostname 	  : ${HOSTNAME}
-	  UserName    : ${USERNAME}
-	  -----------------------------------  
-  EOF
+#Cant Keep Space due to EOF thing. search more info
+tee -a ${LOG_FILE} <<EOF 
+-----------------------------------
+Execution of ${This} started
+----------------------------------
+Hostname        : ${HOSTNAME}
+UserName        : ${USER}
+-----------------------------------  
+EOF
+
 }
 
 WRITE_LOG(){
