@@ -55,16 +55,15 @@ UNDERLINE=$(tput smul)
 ADD_HEADER(){
 #Cant Keep Space due to EOF thing. search more info
 tee -a ${LOG_FILE} <<EOF 
-${LIME_YELLOW}
------------------------------------
+${LIME_YELLOW}\
+-----------------------------------------------
 Execution of ${SCRIPT_NAME} started
-----------------------------------
+-----------------------------------------------
 Hostname        : ${HOSTNAME}
 UserName        : ${USER}
------------------------------------ 
+-----------------------------------------------\
 ${NORMAL}
 EOF
-
 }
 
 WRITE_LOG(){
@@ -96,7 +95,6 @@ ERROR_EXIT(){
 # -----------------------------{{MAIN FUNCTION}}-------------------------------------------------------
 
 ADD_HEADER
-TAKES_TIME
 
 main(){
 
