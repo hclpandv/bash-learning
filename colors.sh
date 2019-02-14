@@ -6,7 +6,7 @@ do
 echo -n -e fg$i- 
 for j in {40..47} # background
 do
-echo -n -e '\E['$i';'$j'm SS64'
+echo -n -e '\E['$i';'$j'm VikiScripts'
 tput sgr0 # Reset text attributes to normal without clear
 done
 echo # newline
@@ -15,6 +15,6 @@ done
 echo -- Clear BG --
 for n in {30..37} # foreground
 do
-echo -e fg$n '\E['$n';'01'm SS64'
+echo -e fg$n '\E['$n';'01'm VikiScripts'
 tput sgr0 # Reset text attributes to normal without clear
 done
